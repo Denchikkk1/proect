@@ -1,0 +1,231 @@
+.contact {
+    padding: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.contact h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: #6a11cb;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.contact h2:hover {
+    color: #6a11cb;
+    transition: color 0.3s ease;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.interactiveText {
+    color: #0073e6;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.interactiveText:hover {
+    color: #ff6347;
+    transform: scale(1.05);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contactMethods {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contactMethods label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.contactMethods input[type="checkbox"] {
+    margin-right: 0.5rem;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.contactMethods label:hover {
+    color: #007BFF;
+}
+
+.siteRating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.siteRating p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.siteRating label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.siteRating label:hover {
+    transform: scale(1.1);
+}
+
+.siteRatingOptions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact input,.contact textarea,.contact select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.contact textarea {
+    resize: none;
+    height: 100px;
+}
+
+.contact button {
+    background-color: #0073e6;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.contact button:hover {
+    color: #333;
+    transform: translateY(-3px) scale(1.05);
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(146,194,250,1) 100%);
+}
+
+.contact label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1200px) {
+    .contact {
+        padding: 40px;
+    }
+
+    .contact h2 {
+        font-size: 2rem;
+    }
+
+    .form {
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 992px) {
+    .contact {
+        padding: 30px;
+    }
+
+    .contact h2 {
+        font-size: 1.8rem;
+    }
+
+    .contactMethods {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .form {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 20px;
+    }
+
+    .contact h2 {
+        font-size: 1.5rem;
+    }
+
+    .form {
+        max-width: 100%;
+    }
+
+    .siteRatingOptions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .contact input, .contact textarea, .contact select {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}

@@ -1,0 +1,292 @@
+.home {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+.hero_section {
+  height: 100vh;
+  background-image: url('./5.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero_overlay {
+  background-color: rgba(62, 6, 151, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.home_title {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.home_text {
+  color: #000000;
+  font-size: 1.2rem;
+}
+
+.content_section {
+  padding: 40px 20px;
+}
+
+.content_item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.content_image_left, .content_image_right {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.content_image_left {
+  margin-right: 20px;
+}
+
+.content_image_right {
+  margin-left: 20px;
+}
+
+.content_text {
+  flex: 1;
+  padding: 10px;
+}
+
+.content_text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.content_text p {
+  color: #555;
+  font-size: 1rem;
+}
+
+.benefits_section {
+  padding: 40px 20px;
+}
+
+.section_title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.benefits {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.benefit_item {
+  flex: 1;
+  text-align: center;
+  background: #dad1ff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(77, 0, 0, 0.1);
+}
+
+.benefit_item h3 {
+  color: rgba(1, 4, 255, 0.5);
+}
+
+.benefit_image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+
+
+.home_title,  .home_text, .benefits_sectio{
+  animation: fadeIn 1s ease-in-out;
+}
+
+.benefit_item {
+  animation: scaleUp 0.7s ease-in-out;
+}
+
+.content_image_left, .content_image_right {
+  animation: zoomIn 1s ease-in-out;
+}
+
+.benefit_item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit_image:hover {
+  transform: rotate(10deg);
+  transition: transform 0.3s ease;
+}
+
+.content_image_left:hover,
+.content_image_right:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* Для экранов шириной <= 1200px */
+@media (max-width: 1200px) {
+  .benefits {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .content_item {
+    flex-direction: column;
+  }
+
+  .content_image_left,
+  .content_image_right {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+
+  .content_text {
+    text-align: center;
+  }
+}
+
+/* Для экранов шириной <= 992px */
+@media (max-width: 992px) {
+  .hero_section {
+    height: 80vh;
+    background-position: top;
+  }
+
+  .home_title {
+    font-size: 2.5rem;
+  }
+
+  .home_text {
+    font-size: 1rem;
+  }
+
+  .benefit_item {
+    padding: 15px;
+  }
+}
+
+/* Для экранов шириной <= 768px */
+@media (max-width: 768px) {
+  .hero_section {
+    height: auto;
+    padding: 20px;
+  }
+
+  .home_title {
+    font-size: 2rem;
+  }
+
+  .benefits {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .benefit_item {
+    padding: 10px;
+  }
+
+  .content_section,
+  .benefits_section {
+    padding: 20px 10px;
+  }
+
+  .content_item {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .content_image_left,
+  .content_image_right {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+
+  .content_text h2 {
+    font-size: 1.3rem;
+  }
+
+  .content_text p {
+    font-size: 0.85rem;
+  }
+
+  .hero_overlay {
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .home_text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .benefit_item h3 {
+    font-size: 1rem;
+  }
+
+  .benefit_item p {
+    font-size: 0.8rem;
+  }
+
+  .section_title {
+    font-size: 1.5rem;
+  }
+}
